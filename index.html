@@ -10,30 +10,59 @@
     <!-- Navbar -->
 
     <!-- Is Triangle -->
-    <div class="inputSection" id="inputSection">
-        <h2 class="inputHeader">Is Triangle?</h2>
-        <p class="inputDescription">Please Enter The Angle To Check If They Can Create A Triangle Or Not?</p>
-        <div class="inputForm">
-            <div>
-                <label for="angle1">angle 1(in degrees)</label>
-                <input type="number" id="angle1" class="angleInputs" name="angle1">
-            </div>
-            <div>
-                <label for="angle2">angle 2(in degrees)</label>
-                <input type="number" id="angle2" class="angleInputs" name="angle2">
-            </div>
-            <div>
-                <label for="angle3">angle 3(in degrees)</label>
-                <input type="number" id="angle3" class="angleInputs" name="angle3">
-            </div>
-            <div>
-                <button id="checkBtn" class="checkBtn">Is Triangle?</button>
+    <div class="isTriangle">
+        <div class="inputSection" id="inputSection">
+            <h2 class="inputHeader">Is Triangle?</h2>
+            <p class="inputDescription">Please Enter The Angle To Check If They Can Create A Triangle Or Not?</p>
+            <div class="inputForm">
+                <div>
+                    <label for="angle1">angle 1(in degrees)</label>
+                    <input type="number" id="angle1" class="angleInputs" name="angle1">
+                </div>
+                <div>
+                    <label for="angle2">angle 2(in degrees)</label>
+                    <input type="number" id="angle2" class="angleInputs" name="angle2">
+                </div>
+                <div>
+                    <label for="angle3">angle 3(in degrees)</label>
+                    <input type="number" id="angle3" class="angleInputs" name="angle3">
+                </div>
+                <div>
+                    <button id="checkBtn" class="checkBtn">Is Triangle?</button>
+                </div>
             </div>
         </div>
+        <div class="outputSection">
+            <textarea name="showOutput" id="showOutput" cols="40" rows="3" class="showOutput" placeholder="your output goes here" readonly></textarea>
+        </div>
     </div>
-    <div class="outputSection">
-        <textarea name="showOutput" id="showOutput" cols="40" rows="3" class="showOutput" placeholder="your output goes here" readonly></textarea>
+
+    <!-- Triangle Quiz -->
+    <div class="triangleQuiz">
+        <div class="quizSection">
+            <h2 class="quizHeader">Triangle Quiz</h2>
+            <form action="/#" class="quizForm" id="quizForm">
+                <div class="questions">What is the third angle for the triangle where angle1 = 45° and angle2 = 45°?</div>
+                <input type="radio" name="question1" id="q1_option1">
+                <label for="q1_option1">45<sup>&deg;</sup></label>
+                <input type="radio" name="question1" id="q1_option2">
+                <label for="q1_option2">60<sup>&deg;</sup></label>
+                <input type="radio" name="question1" id="q1_option3">
+                <label for="q1_option3">90<sup>&deg;</sup></label>
+
+                <div class="questions">If a triangle has an angle of 90 degrees, what is it called?</div>
+                <input type="radio" name="question2" id="q2_option1">
+                <label for="q2_option1">obtuse</label>
+                <input type="radio" name="question2" id="q2_option2">
+                <label for="q2_option2">acute </label>
+                <input type="radio" name="question2" id="q2_option3">
+                <label for="q2_option3">right angled</label>
+            </form>
+            <button id="submitForm">Submit Answer</button>
+        </div>
+        <div class="showScore" id="showScore"></div>
     </div>
+
 
     <script src="main.js" type="text/JavaScript"></script>
 </body>
