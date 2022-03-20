@@ -3,8 +3,12 @@ const checkBtn = document.querySelector("#checkBtn")
 const showOutput = document.querySelector("#showOutput")
 
 
-function calculateSumOfAngles(angle) {
-    return Number(angle[0].value) + Number(angle[1].value)  + Number(angle[2].value);
+function calculateSumOfAngles(angles) {
+    let sum = Number(angles[0].value) + Number(angles[1].value)  + Number(angles[2].value);
+    for(angle of angles){
+        angle.value = "";
+    }
+    return sum;
 }
 
 function isTriangle() {
@@ -13,8 +17,7 @@ function isTriangle() {
         showOutput.value = `Yayyy!! The Angles From A Triangle`
     }
     else{
-        showOutput.value = `Oh Oh!, the angles do not form a triangle. Try Again With Different Angles`
-        
+        showOutput.value = `Oh Oh!, the angles do not form a triangle. Try Again With Different Angles`  
     }
 }
 
