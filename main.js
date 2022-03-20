@@ -66,3 +66,20 @@ function calculateHypo () {
 }
 
 checkHypo.addEventListener("click", calculateHypo)
+
+
+// Area Of Traingle
+
+const lengthInputs = document.querySelectorAll(".lengthInputs")
+const getArea = document.querySelector("#getArea")
+const showArea = document.querySelector("#showArea")
+
+
+function calculateArea() {
+    let base = Number(lengthInputs[0].value)
+    let height = Number(lengthInputs[1].value)
+    let area = (base*height)/2;
+    console.log(area)
+}
+
+getArea.addEventListener("click", calculateArea )
