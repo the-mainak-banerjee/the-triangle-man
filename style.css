@@ -4,7 +4,7 @@
     --ternary-color: #be1818 ;
     --font-light: #ffffff;
     --font-lighter: #585858;
-    --background-color: #1255c0a9;
+    --background-color: #042964;
 }
 
 *{
@@ -30,9 +30,7 @@ button:hover{
     color: white;
 }
 
-body{
-    background-color: var(--primary-color);
-    padding: 50px;
+body{ 
     color: var(--font-light);
 }
 
@@ -47,6 +45,15 @@ input, button {
 
 /* Individual Section Style */
 
+.isTriangleSec, .hypoSec{
+    background-color: var(--primary-color);
+    padding: 50px 50px 30px;
+}
+
+.triangleQuizSec, .checkAreaSec{
+    background-color: var(--background-color);
+    padding: 50px 50px 10px;
+}
 
 .isTriangle, .triangleQuiz, .checkHypotenuse, .checkArea{
     margin: 0px auto 50px;
@@ -164,7 +171,7 @@ hr{
 
 @media screen and (max-width: 500px){
     .inputHeader, .quizHeader, .hypoHeader, .areaHeader{
-        font-size: 1.5rem;
+        font-size: 1.8rem;
         margin-bottom: 10px;
     }
     
