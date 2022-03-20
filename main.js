@@ -7,19 +7,16 @@ const showOutput = document.querySelector("#showOutput")
 
 function calculateSumOfAngles(angles) {
     let sum = Number(angles[0].value) + Number(angles[1].value)  + Number(angles[2].value);
-    for(angle of angles){
-        angle.value = "";
-    }
     return sum;
 }
 
 function isTriangle() {
     let sumOfAngles = calculateSumOfAngles(angleInputs)
     if(sumOfAngles === 180){
-        showOutput.value = `Yayyy!! The Angles From A Triangle`
+        showOutput.innerText = `Yayyy!! The Angles From A Triangle`
     }
     else{
-        showOutput.value = `Oh Oh!, the angles do not form a triangle. Try Again With Different Angles`  
+        showOutput.innerText = `Oh Oh!, the angles don't form a triangle.`  
     }
 }
 
@@ -79,7 +76,7 @@ function calculateArea() {
     let base = Number(lengthInputs[0].value)
     let height = Number(lengthInputs[1].value)
     let area = (base*height)/2;
-    console.log(area)
+    showArea.innerText = `The Area Is ${area}`
 }
 
 getArea.addEventListener("click", calculateArea )

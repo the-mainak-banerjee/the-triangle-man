@@ -1,0 +1,171 @@
+:root{
+    --primary-color: #091F43;
+    --secondary-color: #fc2323;
+    --ternary-color: #be1818 ;
+    --font-light: #ffffff;
+    --font-lighter: #585858;
+    --background-color: #1255c0a9;
+}
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-weight: normal;
+}
+
+button{
+    cursor: pointer;
+    width: 100%;
+    background-color: var(--secondary-color);
+    color: white;
+    padding: 10px;
+    font-size: 1.2rem;
+    border-radius: 5px;
+}
+
+button:hover{
+    background-color: var(--ternary-color);
+    color: white;
+}
+
+body{
+    background-color: var(--primary-color);
+    padding: 50px;
+    color: var(--font-light);
+}
+
+input, button {
+    border: none;
+    outline: none;
+}
+
+/* Individual Section Style */
+
+
+.isTriangle, .triangleQuiz, .checkHypotenuse, .checkArea{
+    margin: 0px auto 50px;
+    max-width: 60vw;
+    padding: 20px;
+}
+
+.inputHeader, .quizHeader, .hypoHeader, .areaHeader{
+    text-align: center;
+    font-weight: bold;
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+hr{
+    width: 20%;
+    margin: 0 40% 30px 40%;
+    border: 1px dashed red;
+}
+
+.inputDescription, .hypoDescription, .areaDescription{
+    text-align: center;
+    font-size: 1.5rem;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 2px solid var(--secondary-color);
+    border-radius: 5px;
+}
+
+.outputSection, .showScore, .showOutputSection, .showAreaSection{
+    margin: 20px 0px;
+    text-align: center;
+    font-size: 1.5rem;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 2px solid var(--secondary-color);
+    border-radius: 5px;
+}
+
+/* IS Triangele */
+
+
+
+.inputForm{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.inputForm label{
+    font-size: 1.15rem;
+}
+
+.inputForm input{
+    margin: 5px 0px 20px;
+    padding: 10px;
+}
+
+
+
+/* Triangle Quiz */
+
+.quizForm .question-container{
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 2px solid var(--secondary-color);
+    border-radius: 5px;
+}
+
+.quizForm .questions {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.quizForm label{
+    font-size: 1.5rem;
+}
+
+.quizForm input{
+    margin: 5px 0px 20px;
+    margin-bottom: 10px;
+}
+
+
+/* Check Hypoteneuse */
+
+
+.userInputForm{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.userInputForm label{
+    font-size: 1.15rem;
+    display: block;
+}
+
+.userInputForm input{
+    margin: 5px 0px 20px;
+    padding: 10px;
+    width: 100%;
+}
+
+
+/* For Smaller Device */
+
+@media screen and (max-width: 500px){
+    .inputHeader, .quizHeader, .hypoHeader, .areaHeader{
+        font-size: 1.5rem;
+        margin-bottom: 10px;
+    }
+    
+    .inputDescription, .hypoDescription, .areaDescription{
+        font-size: 1.2rem;
+    }
+    
+    .outputSection, .showScore, .showOutputSection, .showAreaSection{
+        font-size: 1.2rem;
+    }
+
+    hr{
+        width: 50%;
+        margin: 0 25% 30px 25%;
+        border: 1px dashed red;
+    }
+}
