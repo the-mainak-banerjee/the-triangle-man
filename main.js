@@ -10,12 +10,11 @@ function calculateSumOfAngles(angle) {
 function isTriangle() {
     let sumOfAngles = calculateSumOfAngles(angleInputs)
     if(sumOfAngles === 180){
-        console.log("Is Triangle")
-        console.log(sumOfAngles)
+        showOutput.value = `Yayyy!! The Angles From A Triangle`
     }
     else{
-        console.log(sumOfAngles)
-        console.log("Not A Triangle")
+        showOutput.value = `Oh Oh!, the angles do not form a triangle. Try Again With Different Angles`
+        
     }
 }
 
