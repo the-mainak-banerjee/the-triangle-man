@@ -49,3 +49,20 @@ function calculateScore(){
 
 submitFoem.addEventListener("click", calculateScore)
 
+
+
+// Check Hypotenuse
+
+const sideInputs = document.querySelectorAll(".sideInputs")
+const checkHypo = document.querySelector("#checkHypo")
+const getOutput = document.querySelector("#getOutput") 
+
+
+function calculateHypo () {
+    let a = Number(sideInputs[0].value)
+    let b = Number(sideInputs[1].value)
+    let hypo = Math.sqrt((a**2) + (b**2))
+    getOutput.innerText = `The length of the hypotenuse is ${hypo} cm`
+}
+
+checkHypo.addEventListener("click", calculateHypo)
