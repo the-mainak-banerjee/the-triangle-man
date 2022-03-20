@@ -3,6 +3,7 @@
 const angleInputs = document.querySelectorAll(".angleInputs")
 const checkBtn = document.querySelector("#checkBtn")
 const showOutput = document.querySelector("#showOutput")
+const errMsg1 = document.querySelector("#errMsg1")
 
 
 function calculateSumOfAngles(angles) {
@@ -11,13 +12,22 @@ function calculateSumOfAngles(angles) {
 }
 
 function isTriangle() {
-    let sumOfAngles = calculateSumOfAngles(angleInputs)
-    if(sumOfAngles === 180){
-        showOutput.innerText = `Yayyy!! The Angles From A Triangle`
+    
+    if(angleInputs[0].value && angleInputs[1].value && angleInputs[2].value){
+        errMsg1.classList.add("hideElement")
+        let sumOfAngles = calculateSumOfAngles(angleInputs)
+        if(sumOfAngles === 180){
+            showOutput.innerText = `Yayyy!! The Angles From A Triangle`
+        }
+        else{
+            showOutput.innerText = `Oh Oh!, the angles don't form a triangle.`  
+        }
     }
     else{
-        showOutput.innerText = `Oh Oh!, the angles don't form a triangle.`  
+        errMsg1.classList.remove("hideElement")
+        errMsg1.innerText = "*Please add All Angles First*"
     }
+    
 }
 
 checkBtn.addEventListener("click", isTriangle)
@@ -52,14 +62,22 @@ submitFoem.addEventListener("click", calculateScore)
 
 const sideInputs = document.querySelectorAll(".sideInputs")
 const checkHypo = document.querySelector("#checkHypo")
-const getOutput = document.querySelector("#getOutput") 
+const getOutput = document.querySelector("#getOutput")
+const errMsg2 = document.querySelector("#errMsg2") 
 
 
 function calculateHypo () {
     let a = Number(sideInputs[0].value)
     let b = Number(sideInputs[1].value)
-    let hypo = Math.sqrt((a**2) + (b**2))
-    getOutput.innerText = `The length of the hypotenuse is ${hypo} cm`
+    if(a< 1 || b < 1){
+        errMsg2.classList.remove("hideElement")
+        errMsg2.innerText = "*Please add Positive Value First*"
+    }
+    else{
+        errMsg2.classList.add("hideElement")
+        let hypo = Math.sqrt((a**2) + (b**2))
+        getOutput.innerText = `The length of the hypotenuse is ${hypo} cm`
+    }
 }
 
 checkHypo.addEventListener("click", calculateHypo)
@@ -70,13 +88,21 @@ checkHypo.addEventListener("click", calculateHypo)
 const lengthInputs = document.querySelectorAll(".lengthInputs")
 const getArea = document.querySelector("#getArea")
 const showArea = document.querySelector("#showArea")
+const errMsg3 = document.querySelector("#errMsg3")
 
 
 function calculateArea() {
     let base = Number(lengthInputs[0].value)
     let height = Number(lengthInputs[1].value)
-    let area = (base*height)/2;
-    showArea.innerText = `The Area Is ${area}`
+    if(base < 1 || height < 1){
+        errMsg3.classList.remove("hideElement")
+        errMsg3.innerText = "*Please add Positive Value First*"
+    }
+    else{
+        errMsg3.classList.add("hideElement")
+        let area = (base*height)/2;
+        showArea.innerText = `The Area Is ${area}`
+    }
 }
 
 getArea.addEventListener("click", calculateArea )

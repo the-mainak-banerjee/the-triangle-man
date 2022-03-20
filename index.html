@@ -18,18 +18,20 @@
             <p class="inputDescription">Please Enter The Angle To Check If They Can Create A Triangle Or Not?</p>
             <div class="inputForm">
                     <label for="angle1">angle 1(in degrees)</label>
-                    <input type="number" id="angle1" class="angleInputs" name="angle1">
+                    <input type="number" id="angle1" class="angleInputs" name="angle1" placeholder="45">
                 
                     <label for="angle2">angle 2(in degrees)</label>
-                    <input type="number" id="angle2" class="angleInputs" name="angle2">
+                    <input type="number" id="angle2" class="angleInputs" name="angle2" placeholder="45">
                 
                 
                     <label for="angle3">angle 3(in degrees)</label>
-                    <input type="number" id="angle3" class="angleInputs" name="angle3">
-                
-                <div>
-                    <button id="checkBtn" class="checkBtn">Is Triangle?</button>
-                </div>
+                    <input type="number" id="angle3" class="angleInputs" name="angle3" placeholder="45">
+                    <div class="errMsgContain">
+                        <p class="errMsg1 hideElement" id="errMsg1">Error Msg Goes here</p>
+                    </div>
+                    <div>
+                        <button id="checkBtn" class="checkBtn">Is Triangle?</button>
+                    </div>
             </div>
         </div>
         <div class="outputSection">
@@ -78,11 +80,14 @@
             <div class="userInputForm">
                 <div>
                     <label for="a">Add The Value of a</label>
-                    <input type="number" id="a" class="sideInputs" name="a" placeholder="a">
+                    <input type="number" id="a" class="sideInputs" name="a" placeholder="a" min="1">
                 </div>
                 <div>
                     <label for="b">Add The Value of b</label>
-                    <input type="number" id="b" class="sideInputs" name="b" placeholder="b">
+                    <input type="number" id="b" class="sideInputs" name="b" placeholder="b" min="1">
+                </div>
+                <div class="errMsgContain">
+                    <p class="errMsg2 hideElement" id="errMsg2">Error Msg Goes here</p>
                 </div>
                 <div>
                     <button id="checkHypo" class="checkHypo">Check Hypotenuse</button>
@@ -106,11 +111,14 @@
             <div class="userInputForm">
                 <div>
                     <label for="base">Base(in cm)</label>
-                    <input type="number" id="base" class="lengthInputs" name="base" placeholder="base">
+                    <input type="number" id="base" class="lengthInputs" name="base" placeholder="base" min="1">
                 </div>
                 <div>
                     <label for="height">Height(in cm)</label>
-                    <input type="number" id="height" class="lengthInputs" name="height" placeholder="height">
+                    <input type="number" id="height" class="lengthInputs" name="height" placeholder="height" min="1">
+                </div>
+                <div class="errMsgContain">
+                    <p class="errMsg3 hideElement" id="errMsg3">Error Msg Goes here</p>
                 </div>
                 <div>
                     <button id="getArea" class="getArea">Calculate Area</button>
